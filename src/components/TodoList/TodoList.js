@@ -8,6 +8,11 @@ class TodoList extends Component {
     let newTodo = this.state.todo.concat(incomingValue);
     this.setState({ todo: newTodo });
   };
+  deleteTodo = (id) => {
+    let todoCopy = [...this.state.todo];
+    todoCopy.splice(id, 1);
+    this.setState({ todo: todoCopy });
+  };
 
   render() {
     const { todo } = this.state;
@@ -15,8 +20,14 @@ class TodoList extends Component {
       <>
         <TodoForm receiveInputValue={this.handleIncomingValue} />
         {todo.length > 0 &&
-          todo.map((todoItem) => {
-            return <TodoItem key={todoItem.id} todo={todoItem.inputValue} />;
+          todo.map((todoItem, index) => {
+            return (
+              <TodoItem
+                key={index}
+                todo={todoItem}
+                deleteTodo={() => this.deleteTodo(index)}
+              />
+            );
           })}
       </>
     );

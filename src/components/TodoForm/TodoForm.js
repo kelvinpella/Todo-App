@@ -6,10 +6,10 @@ const TodoForm = (props) => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.receiveInputValue({
-      id: Math.floor(Math.random() * 10000), // get unique id
-      inputValue: todo,
-    });
+    if (todo.trim().length) {
+      props.receiveInputValue(todo);
+      setTodo("");
+    }
     setTodo("");
   };
 

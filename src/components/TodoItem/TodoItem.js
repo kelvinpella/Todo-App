@@ -4,17 +4,17 @@ import { AiOutlineDelete } from "react-icons/ai";
 
 const TodoItem = (props) => {
   return (
-    <di>
+    <div>
       <p>
         {props.todo}
         <span>
           <BiEditAlt />
         </span>
-        <span>
+        <span onClick={props.deleteTodo}>
           <AiOutlineDelete />
         </span>
       </p>
-    </di>
+    </div>
   );
 };
 
