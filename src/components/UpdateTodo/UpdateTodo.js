@@ -1,6 +1,10 @@
-import React, { useState } from "react";
-const UpdateTodo = (props) => {
+import React, { useState, useEffect } from "react";
+const UpdateTodo = React.forwardRef((props, ref) => {
   const [update, setUpdate] = useState(props.value);
+
+  useEffect(() => {
+    ref.current.focus();
+  }, []);
   const handleInputChange = (e) => {
     setUpdate(e.target.value);
   };
@@ -17,11 +21,16 @@ const UpdateTodo = (props) => {
   };
   return (
     <>
-      <input type="text" onChange={handleInputChange} value={update}></input>
+      <input
+        type="text"
+        ref={ref}
+        onChange={handleInputChange}
+        value={update}
+      ></input>
       <input type="button" value="Update" onClick={handleUpdate}></input>
       <input type="button" value="Cancel" onClick={handleCancelUpdate}></input>
     </>
   );
-};
+});
 
 export default UpdateTodo;

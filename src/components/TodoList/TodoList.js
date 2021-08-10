@@ -5,6 +5,8 @@ import UpdateTodo from "../UpdateTodo/UpdateTodo";
 
 class TodoList extends Component {
   state = { todo: [] };
+  todoRef = React.createRef();
+  updateRef = React.createRef();
   handleIncomingValue = (incomingValue) => {
     let newTodo = [...this.state.todo];
     const id = incomingValue.id;
@@ -28,6 +30,7 @@ class TodoList extends Component {
       id,
       1,
       <UpdateTodo
+        ref={this.updateRef}
         id={id}
         value={todoCopy[id]}
         receiveUpdateValue={this.handleIncomingValue}
@@ -54,7 +57,10 @@ class TodoList extends Component {
     }
     return (
       <>
-        <TodoForm receiveInputValue={this.handleIncomingValue} />
+        <TodoForm
+          ref={this.todoRef}
+          receiveInputValue={this.handleIncomingValue}
+        />
         <ol>{renderedContent}</ol>
       </>
     );
