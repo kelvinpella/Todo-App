@@ -61,7 +61,9 @@ class TodoList extends Component {
           ref={this.todoRef}
           receiveInputValue={this.handleIncomingValue}
         />
-        <ol>{renderedContent}</ol>
+        <div>
+          <ol>{renderedContent}</ol>
+        </div>
       </>
     );
   }

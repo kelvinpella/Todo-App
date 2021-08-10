@@ -4,7 +4,7 @@ const UpdateTodo = React.forwardRef((props, ref) => {
 
   useEffect(() => {
     ref.current.focus();
-  }, []);
+  });
   const handleInputChange = (e) => {
     setUpdate(e.target.value);
   };
@@ -20,7 +20,7 @@ const UpdateTodo = React.forwardRef((props, ref) => {
     setUpdate("");
   };
   return (
-    <>
+    <div>
       <input
         type="text"
         ref={ref}
@@ -29,7 +29,7 @@ const UpdateTodo = React.forwardRef((props, ref) => {
       ></input>
       <input type="button" value="Update" onClick={handleUpdate}></input>
       <input type="button" value="Cancel" onClick={handleCancelUpdate}></input>
-    </>
+    </div>
   );
 });
 
