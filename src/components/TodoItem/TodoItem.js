@@ -3,19 +3,24 @@ import { BiEditAlt } from "react-icons/bi";
 import { AiOutlineDelete } from "react-icons/ai";
 
 const TodoItem = (props) => {
-  return (
-    <div>
+  // prevent rendering wrong icons beside updateTodo
+  let renderedContent;
+  if (typeof props.todo === "string") {
+    renderedContent = (
       <p>
         {props.todo}
-        <span>
+        <span onClick={props.updateTodo}>
           <BiEditAlt />
         </span>
         <span onClick={props.deleteTodo}>
           <AiOutlineDelete />
         </span>
       </p>
-    </div>
-  );
+    );
+  } else {
+    renderedContent = props.todo;
+  }
+  return <>{renderedContent}</>;
 };
 
 export default TodoItem;

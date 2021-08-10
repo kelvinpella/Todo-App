@@ -7,7 +7,7 @@ const TodoForm = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (todo.trim().length) {
-      props.receiveInputValue(todo);
+      props.receiveInputValue({ id: "", value: todo });
       setTodo("");
     }
     setTodo("");
