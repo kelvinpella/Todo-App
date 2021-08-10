@@ -11,11 +11,15 @@ const UpdateTodo = (props) => {
     }
     setUpdate("");
   };
+  const handleCancelUpdate = () => {
+    props.receiveUpdateValue({ id: props.id, value: props.value });
+    setUpdate("");
+  };
   return (
     <>
       <input type="text" onChange={handleInputChange} value={update}></input>
       <input type="button" value="Update" onClick={handleUpdate}></input>
-      <input type="button" value="Cancel"></input>
+      <input type="button" value="Cancel" onClick={handleCancelUpdate}></input>
     </>
   );
 };
