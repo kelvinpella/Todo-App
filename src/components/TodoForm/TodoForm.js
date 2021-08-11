@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import styles from "./TodoForm.module.css";
 const TodoForm = React.forwardRef((props, ref) => {
   const [todo, setTodo] = useState("");
 
@@ -18,14 +19,14 @@ const TodoForm = React.forwardRef((props, ref) => {
   };
 
   return (
-    <div>
+    <div className={styles.FormContainer}>
       <h1>What's your plan today?</h1>
-      <form onSubmit={handleSubmit}>
+      <form className={styles.Form} onSubmit={handleSubmit}>
         <input
           ref={ref}
           name="todo"
           type="text"
-          placeholder="Add Todo"
+          placeholder="Todo..."
           value={todo}
           onChange={inputChangeHandler}
         ></input>

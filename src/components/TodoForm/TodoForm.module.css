@@ -1,0 +1,37 @@
+.FormContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.FormContainer h1 {
+  font-size: 1.8rem;
+  margin: 2rem 0;
+}
+
+.Form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #d17474;
+  border-radius: 5px;
+  padding: 20px;
+  justify-content: space-between;
+}
+.Form input[type="text"] {
+  outline: none;
+  width: 65%;
+  font-size: 1.1rem;
+  border: 0;
+  background-color: inherit;
+  padding: 0;
+}
+.Form input[type="submit"] {
+  outline: none;
+  width: 30%;
+  font-size: 1.2rem;
+  border: 0;
+  background-color: inherit;
+  padding: 0;
+}
