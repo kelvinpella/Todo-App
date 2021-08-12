@@ -3,10 +3,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: bisque;
-  border-radius: 5px;
+  background-color: #ffffff;
   padding: 10px;
-  margin: 10px 0;
+  border-bottom: 1px solid #808080;
 }
 
 .TodoItemContainer p {
@@ -14,12 +13,13 @@
   overflow: auto;
   margin: 0;
   font-size: 1rem;
+  color: #172735;
 }
 
 .TodoItemContainer div {
   width: 25%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin: 0 10px;
 }

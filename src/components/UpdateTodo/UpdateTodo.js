@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { ImCross } from "react-icons/im";
+import { FaCheck } from "react-icons/fa";
 import styles from "./UpdateTodo.module.css";
 const UpdateTodo = React.forwardRef((props, ref) => {
   const [update, setUpdate] = useState(props.value);
@@ -29,13 +31,13 @@ const UpdateTodo = React.forwardRef((props, ref) => {
         value={update}
         maxLength="27"
       ></input>
-      <div className={styles.UpdateCancelButtons}>
-        <input type="button" value="Update" onClick={handleUpdate}></input>
-        <input
-          type="button"
-          value="Cancel"
-          onClick={handleCancelUpdate}
-        ></input>
+      <div className={styles.UpdateCancelIcons}>
+        <div onClick={handleUpdate}>
+          <FaCheck />
+        </div>
+        <div onClick={handleCancelUpdate}>
+          <ImCross />
+        </div>
       </div>
     </div>
   );

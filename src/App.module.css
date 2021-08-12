@@ -15,10 +15,12 @@
   align-items: flex-start;
   justify-content: flex-start;
   align-content: flex-start;
+  background-color: #ffff;
 }
 
 .Footer {
   max-width: 40%;
   margin: 20px 0;
   align-self: center;
+  font-size: 0.8rem;
 }
