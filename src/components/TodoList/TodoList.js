@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import TodoForm from "../TodoForm/TodoForm";
 import TodoItem from "../TodoItem/TodoItem";
 import UpdateTodo from "../UpdateTodo/UpdateTodo";
+import styles from "./TodoList.module.css";
 
 class TodoList extends Component {
   state = { todo: [] };
@@ -61,8 +62,8 @@ class TodoList extends Component {
           ref={this.todoRef}
           receiveInputValue={this.handleIncomingValue}
         />
-        <div>
-          <ol>{renderedContent}</ol>
+        <div className={styles.OuterListContainer}>
+          <ol className={styles.ListContainer}>{renderedContent}</ol>
         </div>
       </>
     );
