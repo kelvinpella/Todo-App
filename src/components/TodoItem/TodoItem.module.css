@@ -10,10 +10,10 @@
 }
 
 .TodoItemContainer p {
-  max-width: 65%;
+  width: 65%;
   overflow: auto;
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .TodoItemContainer div {
