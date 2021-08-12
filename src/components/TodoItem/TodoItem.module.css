@@ -1,0 +1,25 @@
+.TodoItemContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: bisque;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.TodoItemContainer p {
+  max-width: 65%;
+  overflow: auto;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.TodoItemContainer div {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}

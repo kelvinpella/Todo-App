@@ -11,4 +11,10 @@
   flex-wrap: nowrap;
   align-items: flex-start;
   justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
+.ListContainer li {
+    width: 100%;
+  }
