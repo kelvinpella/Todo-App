@@ -1,4 +1,5 @@
 .UpdateContainer {
+  position: relative;
   width: 100%;
   height: 4rem;
   display: flex;
@@ -8,6 +9,8 @@
   border-radius: 5px;
   padding: 10px;
   margin: 10px 0;
+  z-index: 200;
+  border-bottom: 2px solid #50394c;
 }
 
 .UpdateContainer input[type="text"] {
@@ -36,4 +39,3 @@
   padding: 0;
   margin: 0 10px;
 }
-

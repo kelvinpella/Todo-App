@@ -15,13 +15,18 @@ const UpdateTodo = React.forwardRef((props, ref) => {
     if (update.trim().length) {
       props.receiveUpdateValue({ id: props.id, value: update });
       setUpdate("");
+      backdrop.remove();
     }
     setUpdate("");
   };
   const handleCancelUpdate = () => {
     props.receiveUpdateValue({ id: props.id, value: props.value });
     setUpdate("");
+    backdrop.remove();
   };
+  // create backdrop and click eventlistener on every re-render
+  const backdrop = document.querySelector("#backdrop");
+  backdrop.addEventListener("click", handleCancelUpdate);
   return (
     <div className={styles.UpdateContainer}>
       <input
