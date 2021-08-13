@@ -11,6 +11,7 @@
   margin: 10px 0;
   z-index: 200;
   border-bottom: 2px solid #50394c;
+  animation: update 1s ease-in-out;
 }
 
 .UpdateContainer input[type="text"] {
@@ -38,4 +39,16 @@
   outline: none;
   padding: 0;
   margin: 0 10px;
+}
+.UpdateCancelIcons div:hover {
+  color: #74426b;
+}
+
+@keyframes update {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

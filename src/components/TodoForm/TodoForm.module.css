@@ -30,6 +30,7 @@
   padding: 0;
   color: #172735;
 }
+
 .Form input[type="submit"] {
   outline: none;
   width: 30%;
@@ -39,4 +40,8 @@
   background-color: inherit;
   padding: 0;
   color: #50394c;
+}
+.Form input[type="submit"]:hover {
+  color: #74426b;
+  cursor: pointer;
 }

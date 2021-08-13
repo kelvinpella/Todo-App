@@ -6,7 +6,7 @@ import styles from "./TodoList.module.css";
 
 class TodoList extends Component {
   state = { todo: [] };
-  todoRef = React.createRef();
+  todoFormRef = React.createRef();
   updateRef = React.createRef();
   handleIncomingValue = (incomingValue) => {
     let newTodo = [...this.state.todo];
@@ -30,7 +30,11 @@ class TodoList extends Component {
     const backdrop = document.createElement("div");
     backdrop.setAttribute("id", "backdrop");
     backdrop.style.cssText =
-      "position:absolute;top:0;left:0;width:100vw;height:100vh;z-index:100;background-color:#000;opacity:0.2";
+      "position:absolute;top:0;left:0;width:100vw;height:100vh;z-index:100;background-color:#50394c;opacity:0.2";
+    backdrop.animate([{ opacity: 0 }, { opacity: 0.2 }], {
+      duration: 1000,
+      easing: "ease-in-out",
+    });
     // append backdrop to App container
     const app = document.querySelector("#root").firstChild;
     app.append(backdrop);
@@ -68,7 +72,7 @@ class TodoList extends Component {
     return (
       <>
         <TodoForm
-          ref={this.todoRef}
+          ref={this.todoFormRef}
           receiveInputValue={this.handleIncomingValue}
         />
         <div className={styles.OuterListContainer}>
