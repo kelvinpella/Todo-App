@@ -12,9 +12,8 @@
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  align-items: flex-start;
-  justify-content: flex-start;
-  align-content: flex-start;
+  align-items: center;
+  justify-content: center;
   background-color: #ffff;
   animation: app 1s linear;
 }
@@ -34,5 +33,28 @@
   100% {
     opacity: 1;
     transform: scale(1);
+  }
+}
+/* tablet */
+@media (min-width: 480px) {
+  .App {
+    width: 60%;
+    margin: auto;
+  }
+}
+
+
+/* ipad */
+@media (min-width: 768px) {
+  .App {
+    width: 50%;
+    margin: auto;
+  }
+}
+/* laptop/desktop */
+@media (min-width: 1280px) {
+  .App {
+    width: 30%;
+    margin: auto;
   }
 }

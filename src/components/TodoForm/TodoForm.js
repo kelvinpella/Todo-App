@@ -29,9 +29,9 @@ const TodoForm = React.forwardRef((props, ref) => {
           placeholder="Todo..."
           value={todo}
           onChange={inputChangeHandler}
-          maxLength="27"
+          maxLength="40"
         ></input>
-        <input type="submit" value="Add Todo"></input>
+        <input type="submit" value="Add"></input>
       </form>
     </div>
   );

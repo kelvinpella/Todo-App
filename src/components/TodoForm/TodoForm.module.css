@@ -2,8 +2,8 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 .FormContainer h1 {
   max-width: 100%;
@@ -16,14 +16,14 @@
   display: flex;
   align-items: center;
   background-color: #ffffff;
-  border-radius: 20px;
+  border-radius: 30px;
   padding: 20px;
   justify-content: space-between;
   border: 1px solid #50394c;
 }
 .Form input[type="text"] {
   outline: none;
-  width: 65%;
+  width: 70%;
   font-size: 1rem;
   border: 0;
   background-color: inherit;
@@ -33,7 +33,7 @@
 
 .Form input[type="submit"] {
   outline: none;
-  width: 30%;
+  width: 20%;
   font-size: 1rem;
   font-weight: bold;
   border: 0;
@@ -44,4 +44,37 @@
 .Form input[type="submit"]:hover {
   color: #74426b;
   cursor: pointer;
+}
+/* tablet */
+@media (min-width: 480px) {
+  .Form {
+    margin-bottom: 1.5rem;
+  }
+  .FormContainer h1 {
+    font-size: 1.6rem;
+    margin: 4rem 0;
+  }
+  .Form input[type="text"] {
+    font-size: 1.2rem;
+  }
+  .Form input[type="submit"] {
+    font-size: 1.2rem;
+  }
+}
+/* laptop/destop */
+@media (min-width: 768px) {
+  .Form {
+    margin-bottom: 1.5rem;
+  }
+  .FormContainer h1 {
+    font-size: 1.4rem;
+    align-self: center;
+    margin: 3rem 0;
+  }
+  .Form input[type="text"] {
+    font-size: 1.2rem;
+  }
+  .Form input[type="submit"] {
+    font-size: 1.2rem;
+  }
 }

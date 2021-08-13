@@ -24,6 +24,7 @@ class TodoList extends Component {
     let todoCopy = [...this.state.todo];
     todoCopy.splice(id, 1);
     this.setState({ todo: todoCopy });
+    // set animation indicating something's deleted
     document.querySelector("ol").children[id].animate(
       [
         { transform: "translateY(20px)", opacity: 0 },
@@ -45,9 +46,9 @@ class TodoList extends Component {
       duration: 1000,
       easing: "ease-in-out",
     });
-    // append backdrop to App container
-    const app = document.querySelector("#root").firstChild;
-    app.append(backdrop);
+    // append backdrop to root container
+    const root = document.querySelector("#root");
+    root.append(backdrop);
 
     let todoCopy = [...this.state.todo];
     todoCopy.splice(

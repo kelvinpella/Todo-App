@@ -34,7 +34,7 @@ const UpdateTodo = React.forwardRef((props, ref) => {
         ref={ref}
         onChange={handleInputChange}
         value={update}
-        maxLength="27"
+        maxLength="40"
       ></input>
       <div className={styles.UpdateCancelIcons}>
         <div onClick={handleUpdate}>

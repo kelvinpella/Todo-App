@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background-color: #ffffff;
   padding: 10px;
   border-bottom: 1px solid #808080;
@@ -10,7 +10,7 @@
 }
 
 .TodoItemContainer p {
-  width: 65%;
+  width: 70%;
   overflow: auto;
   margin: 0;
   font-size: 1rem;
@@ -22,9 +22,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 10px;
+  margin-left: 10px;
 }
-.TodoItemContainer div>div:hover {
+.TodoItemContainer div > div:hover {
   color: #74426b;
 }
 
@@ -34,5 +34,11 @@
   }
   100% {
     opacity: 1;
+  }
+}
+/* tablet/laptop */
+@media (min-width: 480px) {
+  .TodoItemContainer p {
+    font-size: 1.2rem;
   }
 }
