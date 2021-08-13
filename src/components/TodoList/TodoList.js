@@ -24,6 +24,16 @@ class TodoList extends Component {
     let todoCopy = [...this.state.todo];
     todoCopy.splice(id, 1);
     this.setState({ todo: todoCopy });
+    document.querySelector("ol").children[id].animate(
+      [
+        { transform: "translateY(20px)", opacity: 0 },
+        { transform: "translateY(0px)", opacity: 1 },
+      ],
+      {
+        duration: 500,
+        easing: "ease-in",
+      }
+    );
   };
   updateTodo = (id) => {
     // create backdrop & apply styles

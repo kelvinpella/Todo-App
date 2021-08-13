@@ -7,7 +7,7 @@
 }
 .FormContainer h1 {
   max-width: 100%;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin: 2rem 0;
 }
 
@@ -24,17 +24,17 @@
 .Form input[type="text"] {
   outline: none;
   width: 65%;
-  font-size: 1.1rem;
+  font-size: 1rem;
   border: 0;
   background-color: inherit;
   padding: 0;
-  color: #172735;
+  color: #000000;
 }
 
 .Form input[type="submit"] {
   outline: none;
   width: 30%;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   border: 0;
   background-color: inherit;
