@@ -26,6 +26,12 @@ class TodoList extends Component {
     this.setState({ todo: todoCopy });
   };
   updateTodo = (id) => {
+    // open backdrop
+    const app = document.querySelector("#root").firstChild;
+    const backdrop = app.firstChild;
+    backdrop.style.cssText =
+      "width:100vw;height:100vh;z-index:100;background-color:#000;";
+
     let todoCopy = [...this.state.todo];
     todoCopy.splice(
       id,
